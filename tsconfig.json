@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "lib": ["ES7"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "strictNullChecks": false,
+    "target": "esnext",
+    "baseUrl": "./src",
+    "paths": {
+      "*": ["src/*",],
+      "components/*":["./components/*"],
+      "screens/*":["./screens/*"],
+      "utils/*":["./utils/*"]
+    },
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "lint": {
+          "validProperties": [
+            "elevation",
+            "shadow-radius",
+            "shadow-opacity",
+            "shadow-color",
+            "shadow-offset",
+            "resize-mode",
+          ]
+        }
+      }
+    ]
+  },
+  "include": ["src","react-native.config.js"],
+  "exclude": ["**/node_modules", "**/.*/"]
+}
